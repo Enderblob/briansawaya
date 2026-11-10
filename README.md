@@ -64,7 +64,6 @@ Every entry has one **hero image** (shown at 16:9, cropped to fit) and an option
 | Slot | Drop the photo here |
 | --- | --- |
 | Smart Insole (featured) | Shows a system diagram (`hero.svg`) for now. To use a photo, add `assets/projects/smart-insole/hero.jpg` and set `"image": "hero.jpg"` |
-| Bottle Opener | `assets/projects/bottle-opener/hero.jpg` |
 
 Remove a row from the table above when you fill its slot.
 
@@ -80,6 +79,7 @@ Remove a row from the table above when you fill its slot.
 | Headshot | `assets/headshot.jpg` (from Downloads) |
 | Combat Robotics Club | `hero.jpg` + gallery `01`–`02.jpg` (Drive and Downloads) |
 | NASA L'SPACE | `hero.jpg`: Team ENHANCE concept-of-operations graphic (from the PDR doc in Drive) |
+| Bottle Opener | `hero.jpg`: team photo from Brian's LinkedIn post (April 19, 2025) |
 | Posture Correction Wearable | `hero.jpg`: Best Presentation award photo. Replace with a photo of the device when there is one |
 
 Jobs that have no project photo use a logo. To swap a logo for a real photo, add `hero.jpg`, set `"image": "hero.jpg"`, and delete the `imageFit` line.

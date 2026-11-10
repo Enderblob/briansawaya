@@ -7,7 +7,6 @@
     "ESB CLIENT PROJECTS (3): linear-array-detector (Williams Lab), sanisure (SaniSure), nexus-labs (Nexus Lab). Each names its client in 'org'.",
     "sanisure: Brian chose on 2026-11-09 to show the SaniSure name and logo. The project is under NDA, so keep the bullets exactly as written and never add project photos or technical details (logo only).",
     "TODO links.github: add your GitHub profile URL (the GitHub link stays hidden while this is empty).",
-    "TODO bottle-opener: the month is a guess (May 2025). Fix dates.start and dates.end so it sorts correctly.",
     "TODO robotics-club: confirm how you want the club named in 'org'.",
     "TODO nexus-labs: confirm the lab's exact name with the client contact, and add a logo or photo if there is one.",
     "Writing rules: say what was built, not a quality. Impact = one short line with a number. At most 3 bullets and 3 tags per entry (the site cuts off extras)."
@@ -298,7 +297,7 @@
       "type": "project",
       "title": "Auto-Locking Bottle Opener for Stroke Survivors",
       "org": "UC Davis Biomedical Engineering Design Challenge",
-      "dates": { "start": "2025-05", "end": "2025-05", "label": "2025" },
+      "dates": { "start": "2025-04", "end": "2025-04" },
       "impact": "1st place, leading a team of 4.",
       "bullets": [
         "Designed an auto-locking bottle opener for stroke survivors with hemiparesis",
@@ -306,6 +305,7 @@
       ],
       "tags": ["Medtech", "CAD"],
       "image": "hero.jpg",
+      "imageAlt": "Team of four holding the bottle opener prototype at the UC Davis Biomedical Engineering Design Challenge",
       "gallery": [],
       "video": "",
       "links": []
