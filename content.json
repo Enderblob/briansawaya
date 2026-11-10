@@ -4,6 +4,7 @@
     "IMAGES: each entry's hero photo goes in assets/projects/<slug>/hero.jpg (16:9, about 1600 x 900). Until the file exists the site shows a gray placeholder, so no JSON edit is needed when you add one.",
     "Jobs without a project photo use the company logo (logo.png) with \"imageFit\": \"contain\" so it is shown whole instead of cropped.",
     "samtec and jhta: logo only until project photos are cleared.",
+    "Experience section uses simple logos: Samtec, Boeing, ISS drawing (jhta), Stanford Biodesign (dxd-healthtech), Stanford (stanford-oct), NASA (nasa-enhance). Project photos for those go in the gallery.",
     "ESB CLIENT PROJECTS (3): linear-array-detector (Williams Lab), sanisure (SaniSure), nexus-labs (Nexus Lab). Each names its client in 'org'.",
     "sanisure: Brian chose on 2026-11-09 to show the SaniSure name and logo. The project is under NDA, so keep the bullets exactly as written and never add project photos or technical details (logo only).",
     "TODO links.github: add your GitHub profile URL (the GitHub link stays hidden while this is empty).",
@@ -183,8 +184,8 @@
         "Designed wire management in SolidWorks, soldered PCBs, and 3D printed 45+ prototype parts"
       ],
       "tags": ["Aerospace", "Electronics", "CAD"],
-      "image": "logo.png",
-      "imageAlt": "International Space Station patch",
+      "image": "logo.svg",
+      "imageAlt": "Drawing of the International Space Station",
       "imageFit": "contain",
       "gallery": [],
       "video": "",
@@ -204,7 +205,7 @@
       ],
       "tags": ["Medtech"],
       "image": "logo.png",
-      "imageAlt": "Stanford University seal",
+      "imageAlt": "Stanford Biodesign logo",
       "imageFit": "contain",
       "gallery": [],
       "video": "",
@@ -223,9 +224,11 @@
         "Wrote the test procedures and read 20+ papers to define requirements"
       ],
       "tags": ["Medtech", "CAD", "Test"],
-      "image": "hero.jpg",
-      "imageAlt": "3D-printed OCT skin adapter with magnets on an optical table",
+      "image": "logo.svg",
+      "imageAlt": "Stanford University logo",
+      "imageFit": "contain",
       "gallery": [
+        { "src": "00.jpg", "alt": "3D-printed OCT skin adapter with magnets on an optical table" },
         { "src": "01.jpg", "alt": "Adapter mounted on the handheld OCT scanner" },
         { "src": "02.jpg", "alt": "Adapter CAD model" },
         { "src": "03.jpg", "alt": "Skin ring with magnets on a forearm" },
@@ -287,8 +290,10 @@
       ],
       "tags": ["Medtech", "Electronics", "CAD"],
       "image": "hero.jpg",
-      "imageAlt": "Best Presentation Award certificate from the T-PREP Design Expo",
-      "gallery": [],
+      "imageAlt": "Posture wearable circuit: microcontroller, switch, and coin cell battery in a 3D-printed case",
+      "gallery": [
+        { "src": "01.jpg", "alt": "Best Presentation Award certificate from the T-PREP Design Expo" }
+      ],
       "video": "",
       "links": []
     },
@@ -344,9 +349,12 @@
         "Developed and managed the mission's risk table"
       ],
       "tags": ["Aerospace"],
-      "image": "hero.jpg",
-      "imageAlt": "Team ENHANCE concept of operations graphic for the Enceladus mission",
-      "gallery": [],
+      "image": "logo.svg",
+      "imageAlt": "NASA logo",
+      "imageFit": "contain",
+      "gallery": [
+        { "src": "01.jpg", "alt": "Team ENHANCE concept of operations graphic for the Enceladus mission" }
+      ],
       "video": "",
       "links": []
     }

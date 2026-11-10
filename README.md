@@ -73,14 +73,15 @@ Remove a row from the table above when you fill its slot.
 | --- | --- |
 | AutoLab | `hero.jpg` + gallery `01`–`05.jpg` |
 | Linear Array Detector | `hero.jpg` + gallery `01`–`03.jpg` |
-| Stanford research (OCT adapter) | `hero.jpg` + gallery `01`–`05.jpg` |
+| Stanford research (OCT adapter) | `logo.svg` (Stanford wordmark) + gallery `00`–`05.jpg` |
 | BioMyo | `hero.jpg` |
-| Samtec, Boeing, JHTA, DxD HealthTech | `logo.png`, shown whole with `"imageFit": "contain"` |
+| Samtec, Boeing, DxD HealthTech (Stanford Biodesign logo) | `logo.png`, shown whole with `"imageFit": "contain"` |
+| JHTA | `logo.svg`: simple drawing of the International Space Station |
 | Headshot | `assets/headshot.jpg` (from Downloads) |
 | Combat Robotics Club | `hero.jpg` + gallery `01`–`02.jpg` (Drive and Downloads) |
-| NASA L'SPACE | `hero.jpg`: Team ENHANCE concept-of-operations graphic (from the PDR doc in Drive) |
+| NASA L'SPACE | `logo.svg` (NASA logo) + gallery `01.jpg`: Team ENHANCE concept-of-operations graphic |
 | Bottle Opener | `hero.jpg`: team photo from Brian's LinkedIn post (April 19, 2025) |
-| Posture Correction Wearable | `hero.jpg`: Best Presentation award photo. Replace with a photo of the device when there is one |
+| Posture Correction Wearable | `hero.jpg`: circuit photo from the T-PREP pitch deck (Canva) + gallery `01.jpg`: Best Presentation award |
 
 Jobs that have no project photo use a logo. To swap a logo for a real photo, add `hero.jpg`, set `"image": "hero.jpg"`, and delete the `imageFit` line.
 Samtec and JHTA stay logo-only until their project photos are cleared. The SaniSure project shows the company logo only and never gets project photos. The three ESB client projects (`linear-array-detector`, `sanisure`, `nexus-labs`) each name their client in `org`.

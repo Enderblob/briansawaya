@@ -185,7 +185,7 @@ main {
 .media img { width: 100%; height: 100%; object-fit: cover; }
 /* Logos: shown whole on white instead of cropped */
 .media.contain:not(.empty) { background: var(--card); border: 1px solid var(--line); }
-.media.contain img { object-fit: contain; padding: 14% 16%; }
+.media.contain img { object-fit: contain; padding: 8% 10%; }
 .media.empty::after {
   content: "";
   position: absolute;

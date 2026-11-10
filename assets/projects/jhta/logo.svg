@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" width="800" height="450" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>International Space Station</title>
+  <!-- Simple drawing of the station: main truss, eight solar arrays, central modules -->
+  <g fill="#141414">
+    <!-- main truss -->
+    <rect x="40" y="82" width="320" height="8" rx="2"/>
+    <!-- central modules -->
+    <rect x="190" y="30" width="20" height="112" rx="8"/>
+    <rect x="168" y="96" width="64" height="14" rx="6"/>
+    <circle cx="200" cy="86" r="13"/>
+  </g>
+  <!-- solar arrays: four on each side, above and below the truss -->
+  <g fill="#1f4e8c">
+    <rect x="48" y="14" width="26" height="62" rx="2"/>
+    <rect x="48" y="96" width="26" height="62" rx="2"/>
+    <rect x="86" y="14" width="26" height="62" rx="2"/>
+    <rect x="86" y="96" width="26" height="62" rx="2"/>
+    <rect x="288" y="14" width="26" height="62" rx="2"/>
+    <rect x="288" y="96" width="26" height="62" rx="2"/>
+    <rect x="326" y="14" width="26" height="62" rx="2"/>
+    <rect x="326" y="96" width="26" height="62" rx="2"/>
+  </g>
+  <!-- panel lines -->
+  <g stroke="#faf9f6" stroke-width="1.5">
+    <path d="M48 30 h26 M48 45 h26 M48 60 h26 M48 112 h26 M48 127 h26 M48 142 h26"/>
+    <path d="M86 30 h26 M86 45 h26 M86 60 h26 M86 112 h26 M86 127 h26 M86 142 h26"/>
+    <path d="M288 30 h26 M288 45 h26 M288 60 h26 M288 112 h26 M288 127 h26 M288 142 h26"/>
+    <path d="M326 30 h26 M326 45 h26 M326 60 h26 M326 112 h26 M326 127 h26 M326 142 h26"/>
+  </g>
+  <!-- radiators -->
+  <g fill="#8a8780">
+    <rect x="136" y="92" width="14" height="40" rx="2"/>
+    <rect x="250" y="92" width="14" height="40" rx="2"/>
+  </g>
+  <text x="200" y="196" font-size="21" font-weight="700" letter-spacing="1.5" fill="#141414" text-anchor="middle">INTERNATIONAL</text>
+  <text x="200" y="219" font-size="21" font-weight="700" letter-spacing="1.5" fill="#141414" text-anchor="middle">SPACE STATION</text>
+</svg>
