@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- These tags are the only content outside content.json (search engines and link previews read them before JS runs). -->
+  <title>Brian Sawaya · Mechanical Engineering @ UC Berkeley</title>
+  <meta name="description" content="Brian Sawaya designs and builds robots and medical devices. Mechanical Engineering at UC Berkeley, graduating May 2028. Seeking a Summer 2027 ME / hardware internship.">
+  <meta property="og:title" content="Brian Sawaya · Mechanical Engineering @ UC Berkeley">
+  <meta property="og:description" content="I design and build robots and medical devices. Projects, experience, and resume.">
+  <meta property="og:type" content="website">
+
+  <meta name="theme-color" content="#faf9f6">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23141414'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23ff5a00'/%3E%3C/svg%3E">
+
+  <link rel="preload" href="content.json" as="fetch" crossorigin="anonymous">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+  <script src="heart.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <a class="nav-name" href="#top" data-bind="name"></a>
+    <nav aria-label="Sections">
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#experience">Experience</a>
+      <a class="nav-link" href="#skills">Skills</a>
+      <a class="btn btn-primary btn-small" data-resume>Resume</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero: who I am, what I build, how to reach me -->
+    <section id="top" class="hero" aria-label="Introduction">
+      <div class="hero-text">
+        <h1 data-bind="name"></h1>
+        <p class="pitch" data-bind="pitch"></p>
+        <div id="bio"></div>
+        <div class="actions" id="actions"></div>
+      </div>
+      <div id="headshot"></div>
+    </section>
+
+    <!-- Quick facts: school, grad date, what I am looking for, resume -->
+    <div class="facts" id="facts" hidden>
+      <ul id="facts-list"></ul>
+      <a class="btn btn-primary btn-small" data-resume>Resume</a>
+    </div>
+
+    <section id="projects" class="section" data-nav="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Featured Projects</h2>
+      <ul class="cards cards-featured" id="featured-list"></ul>
+    </section>
+
+    <section id="experience" class="section" data-nav="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">Experience</h2>
+      <ol class="timeline" id="experience-list"></ol>
+    </section>
+
+    <section id="more-projects" class="section" data-nav="projects" aria-labelledby="more-title">
+      <h2 id="more-title">More Projects</h2>
+      <ul class="cards cards-more" id="more-list"></ul>
+    </section>
+
+    <section id="skills" class="section" data-nav="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <div id="skills-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links" id="footer-links"></div>
+    <p class="footer-note" id="footer-note"></p>
+  </footer>
+
+  <!--
+    Robotic heart. Decoration only: heart.js assembles it as the page scrolls and it beats at the bottom.
+    Each part has: data-s / data-e (scroll progress where it starts and finishes arriving, 0 to 1),
+    data-dx / data-dy / data-rot (where it flies in from), data-cx / data-cy (the point it rotates around).
+  -->
+  <div class="heart" id="heart" aria-hidden="true">
+    <svg viewBox="0 0 200 216" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="heart-glow-fill">
+          <stop offset="0" stop-color="#ff5a00" stop-opacity="0.5"/>
+          <stop offset="1" stop-color="#ff5a00" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+
+      <circle class="heart-glow" cx="100" cy="94" r="100" fill="url(#heart-glow-fill)"/>
+
+      <!-- Blueprint outline: where the parts will go -->
+      <path class="heart-ghost" d="M100 168 C40 124 22 90 22 62 C22 38 40 22 62 22 C80 22 93 32 100 46 C107 32 120 22 138 22 C160 22 178 38 178 62 C178 90 160 124 100 168 Z"/>
+
+      <g class="heart-core">
+        <!-- Tubes (drawn first so the shells overlap their ends) -->
+        <g class="hp" data-s="0.28" data-e="0.40" data-dx="30" data-dy="-50" data-rot="60" data-cx="125" data-cy="28">
+          <path class="tube" d="M111 46 C111 24 124 13 144 13"/>
+          <path class="tube-core" d="M111 46 C111 24 124 13 144 13"/>
+          <rect class="metal" x="143" y="4" width="6" height="18" rx="2"/>
+        </g>
+        <g class="hp" data-s="0.34" data-e="0.46" data-dx="-30" data-dy="-50" data-rot="-60" data-cx="77" data-cy="28">
+          <path class="tube" d="M89 46 C89 27 80 17 62 15"/>
+          <path class="tube-core" d="M89 46 C89 27 80 17 62 15"/>
+          <rect class="metal" x="57" y="6" width="6" height="18" rx="2"/>
+        </g>
+
+        <!-- Two chamber shells -->
+        <g class="hp" data-s="0.02" data-e="0.16" data-dx="-70" data-dy="-20" data-rot="-50" data-cx="60" data-cy="90">
+          <path class="shell shell-l" d="M97 165 C40 122 22 90 22 62 C22 38 40 22 62 22 C78 22 91 31 97 44 Z"/>
+        </g>
+        <g class="hp" data-s="0.10" data-e="0.24" data-dx="70" data-dy="-20" data-rot="50" data-cx="140" data-cy="90">
+          <path class="shell shell-r" d="M103 165 C160 122 178 90 178 62 C178 38 160 22 138 22 C122 22 109 31 103 44 Z"/>
+        </g>
+
+        <!-- Spine plate that joins the shells -->
+        <g class="hp" data-s="0.20" data-e="0.32" data-dx="0" data-dy="70" data-rot="0" data-cx="100" data-cy="104">
+          <rect class="metal" x="96" y="42" width="8" height="120" rx="4"/>
+        </g>
+
+        <!-- Gears -->
+        <g class="hp" data-s="0.42" data-e="0.56" data-dx="-80" data-dy="30" data-rot="-540" data-cx="68" data-cy="76">
+          <g class="gear-spin" style="transform-origin: 68px 76px">
+            <rect class="metal" x="64.5" y="54" width="7" height="9" rx="1.5"/>
+            <rect class="metal" x="64.5" y="54" width="7" height="9" rx="1.5" transform="rotate(45 68 76)"/>
+            <rect class="metal" x="64.5" y="54" width="7" height="9" rx="1.5" transform="rotate(90 68 76)"/>
+            <rect class="metal" x="64.5" y="54" width="7" height="9" rx="1.5" transform="rotate(135 68 76)"/>
+            <rect class="metal" x="64.5" y="54" width="7" height="9" rx="1.5" transform="rotate(180 68 76)"/>
+            <rect class="metal" x="64.5" y="54" width="7" height="9" rx="1.5" transform="rotate(225 68 76)"/>
+            <rect class="metal" x="64.5" y="54" width="7" height="9" rx="1.5" transform="rotate(270 68 76)"/>
+            <rect class="metal" x="64.5" y="54" width="7" height="9" rx="1.5" transform="rotate(315 68 76)"/>
+            <circle class="metal" cx="68" cy="76" r="16"/>
+            <circle class="hub" cx="68" cy="76" r="5.5"/>
+          </g>
+        </g>
+        <g class="hp" data-s="0.50" data-e="0.64" data-dx="80" data-dy="30" data-rot="540" data-cx="134" data-cy="72">
+          <g class="gear-spin gear-reverse" style="transform-origin: 134px 72px">
+            <rect class="metal" x="131" y="56" width="6" height="8" rx="1.5"/>
+            <rect class="metal" x="131" y="56" width="6" height="8" rx="1.5" transform="rotate(60 134 72)"/>
+            <rect class="metal" x="131" y="56" width="6" height="8" rx="1.5" transform="rotate(120 134 72)"/>
+            <rect class="metal" x="131" y="56" width="6" height="8" rx="1.5" transform="rotate(180 134 72)"/>
+            <rect class="metal" x="131" y="56" width="6" height="8" rx="1.5" transform="rotate(240 134 72)"/>
+            <rect class="metal" x="131" y="56" width="6" height="8" rx="1.5" transform="rotate(300 134 72)"/>
+            <circle class="metal" cx="134" cy="72" r="11"/>
+            <circle class="hub" cx="134" cy="72" r="4"/>
+          </g>
+        </g>
+
+        <!-- Valve wheel on the spine -->
+        <g class="hp" data-s="0.60" data-e="0.70" data-dx="0" data-dy="-70" data-rot="360" data-cx="100" data-cy="62">
+          <circle class="valve" cx="100" cy="62" r="8"/>
+          <path class="line" d="M100 54 V70 M92 62 H108"/>
+          <circle class="hub" cx="100" cy="62" r="2.5"/>
+        </g>
+
+        <!-- Small circuit board -->
+        <g class="hp" data-s="0.66" data-e="0.80" data-dx="0" data-dy="80" data-rot="25" data-cx="100" data-cy="121">
+          <rect class="board" x="80" y="104" width="40" height="34" rx="4"/>
+          <path class="trace" d="M86 112 H96 V120 M114 112 H108 V118 M86 130 H94 M106 130 H114"/>
+          <rect class="chip" x="94" y="118" width="12" height="10" rx="1.5"/>
+          <circle class="pad" cx="86" cy="112" r="1.6"/>
+          <circle class="pad" cx="114" cy="112" r="1.6"/>
+          <circle class="pad" cx="86" cy="130" r="1.6"/>
+          <circle class="led" cx="114" cy="130" r="2.6"/>
+        </g>
+
+        <!-- Bolts -->
+        <g class="hp" data-s="0.76" data-e="0.84" data-dx="-60" data-dy="-60" data-rot="720" data-cx="42" data-cy="52">
+          <circle class="bolt" cx="42" cy="52" r="5"/><path class="line thin" d="M39 52 H45"/>
+        </g>
+        <g class="hp" data-s="0.79" data-e="0.87" data-dx="60" data-dy="-60" data-rot="-720" data-cx="158" data-cy="52">
+          <circle class="bolt" cx="158" cy="52" r="5"/><path class="line thin" d="M155 52 H161"/>
+        </g>
+        <g class="hp" data-s="0.82" data-e="0.90" data-dx="-60" data-dy="60" data-rot="720" data-cx="62" data-cy="118">
+          <circle class="bolt" cx="62" cy="118" r="5"/><path class="line thin" d="M59 118 H65"/>
+        </g>
+        <g class="hp" data-s="0.85" data-e="0.93" data-dx="60" data-dy="60" data-rot="-720" data-cx="138" data-cy="118">
+          <circle class="bolt" cx="138" cy="118" r="5"/><path class="line thin" d="M135 118 H141"/>
+        </g>
+
+        <!-- Wind-up key -->
+        <g class="hp" data-s="0.87" data-e="0.95" data-dx="50" data-dy="0" data-rot="180" data-cx="184" data-cy="84">
+          <path class="line" d="M174 84 H186"/>
+          <circle class="valve" cx="190" cy="77" r="5.5"/>
+          <circle class="valve" cx="190" cy="91" r="5.5"/>
+        </g>
+      </g>
+
+      <!-- ECG line, drawn once the heart is running -->
+      <path class="heart-ecg" pathLength="1" d="M16 200 H62 l5 -5 l5 5 h10 l4 6 l7 -28 l7 32 l4 -10 h12 l6 -6 l6 6 H184"/>
+    </svg>
+    <p class="heart-label" id="heart-label"></p>
+  </div>
+
+  <noscript>
+    <div class="noscript">
+      <p>This page needs JavaScript to load its content. You can still <a href="assets/resume.pdf">download my resume (PDF)</a>.</p>
+    </div>
+  </noscript>
+</body>
+</html>

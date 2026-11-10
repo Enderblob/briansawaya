@@ -1,0 +1,340 @@
+{
+  "_notes": [
+    "Keys starting with an underscore are notes for editors. The site ignores them.",
+    "IMAGES: each entry's hero photo goes in assets/projects/<slug>/hero.jpg (16:9, about 1600 x 900). Until the file exists the site shows a gray placeholder, so no JSON edit is needed when you add one.",
+    "Jobs without a project photo use the company logo (logo.png) with \"imageFit\": \"contain\" so it is shown whole instead of cropped.",
+    "samtec and jhta: logo only until project photos are cleared. nda-client-project (\"image\": \"\") must NEVER get images.",
+    "TODO links.github: add your GitHub profile URL (the GitHub link stays hidden while this is empty).",
+    "TODO bottle-opener: the month is a guess (May 2025). Fix dates.start and dates.end so it sorts correctly.",
+    "TODO robotics-club: confirm how you want the club named in 'org'.",
+    "nda-client-project: keep the wording exactly as written.",
+    "Writing rules: say what was built, not a quality. Impact = one short line with a number. At most 3 bullets and 3 tags per entry (the site cuts off extras)."
+  ],
+
+  "profile": {
+    "name": "Brian Sawaya",
+    "pitch": "I design and build robots and medical devices.",
+    "facts": [
+      "UC Berkeley, B.S. Mechanical Engineering",
+      "Grad May 2028",
+      "Seeking Summer 2027 ME / hardware internship"
+    ]
+  },
+
+  "links": {
+    "email": "briansawaya.work@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/briansawaya",
+    "github": "",
+    "resume": "assets/resume.pdf",
+    "resumeFilename": "Brian_Sawaya_Resume.pdf"
+  },
+
+  "about": {
+    "headshot": { "src": "assets/headshot.jpg", "alt": "Brian Sawaya" },
+    "bio": [
+      "I lead AutoLab at Neurotech@Berkeley and take on client projects with Engineering Solutions @ Berkeley."
+    ]
+  },
+
+  "timeline": [
+    {
+      "slug": "autolab",
+      "type": "project",
+      "featured": true,
+      "title": "AutoLab: Neuron Culturing Robot",
+      "org": "Neurotech@Berkeley · Project Lead",
+      "dates": { "start": "2025-08", "end": "present" },
+      "impact": "Lead a team of 5 building a cell-culture robot with 0.1 mm repeatability.",
+      "bullets": [
+        "Building a multi-axis gantry that moves culturing tools across well plates",
+        "Designed the pipette drive with stepper motors and A4988 drivers; now building a mechanical tool changer",
+        "Won a $2,000 Jacobs Ignite grant and trained 30+ members in cell culturing"
+      ],
+      "tags": ["Robotics", "CAD", "Electronics"],
+      "image": "hero.jpg",
+      "imageAlt": "CAD model of the AutoLab gantry robot over a well plate",
+      "gallery": [
+        { "src": "01.jpg", "alt": "Tool changer latch, CAD" },
+        { "src": "02.jpg", "alt": "Tool changer engaging, CAD" },
+        { "src": "03.jpg", "alt": "Pipette tool, CAD" },
+        { "src": "04.jpg", "alt": "Control interface with camera preview and gantry position" },
+        { "src": "05.jpg", "alt": "Sterile enclosure concept and first-semester poster" }
+      ],
+      "video": "",
+      "links": []
+    },
+    {
+      "slug": "smart-insole",
+      "type": "project",
+      "featured": true,
+      "title": "Smart Insole for Diabetic Foot Ulcers",
+      "org": "Hackathon · Team of 4",
+      "dates": { "start": "2026-10", "end": "2026-10" },
+      "impact": "Insole that flags ulcer risk when left and right feet differ by 2.2 °C.",
+      "bullets": [
+        "Programmed two Arduino Nano 33 IoT boards in C++ to read 4 thermistors per foot and an IMU over I2C",
+        "Streamed live sensor data over Bluetooth Low Energy to a Python logger",
+        "Owned the data pipeline, the Bluetooth link, and the bill of materials"
+      ],
+      "tags": ["Medtech", "Electronics", "Software"],
+      "image": "hero.svg",
+      "imageAlt": "System diagram: thermistors and an IMU on each foot feed an Arduino Nano 33 IoT, which sends data over Bluetooth Low Energy to a Python logger",
+      "gallery": [],
+      "video": "",
+      "links": []
+    },
+    {
+      "slug": "linear-array-detector",
+      "type": "project",
+      "featured": true,
+      "title": "Linear Array Detector for Mass Spectrometry",
+      "org": "Engineering Solutions @ Berkeley",
+      "dates": { "start": "2025-09", "end": "present" },
+      "impact": "Aligned a 19-hole electrode array to under 0.1 mm between plates.",
+      "bullets": [
+        "Proof of concept for identifying viral infections from vaporized saliva",
+        "Located the plates with reamed dowel pin holes, M3 fasteners, and a resin-printed alignment jig",
+        "Compared 9 manufacturing methods and reached ~40% ion transmittance against a 60% target"
+      ],
+      "tags": ["CAD", "Fabrication", "Test"],
+      "image": "hero.jpg",
+      "imageAlt": "CAD model of the linear array detector between two mounting plates",
+      "gallery": [
+        { "src": "01.jpg", "alt": "Full mass spectrometer assembly in CAD and the first laser-cut plate prototype" },
+        { "src": "02.jpg", "alt": "Locating plate iterations, datum block, and film spacer" },
+        { "src": "03.jpg", "alt": "Electrode stack and linear array sub-assembly" }
+      ],
+      "video": "",
+      "links": []
+    },
+    {
+      "slug": "biomyo",
+      "type": "project",
+      "featured": true,
+      "title": "BioMyo: Muscle-Controlled Prosthetic Arm",
+      "org": "Team Lead · 5 students, 3 colleges",
+      "dates": { "start": "2024-01", "end": "2025-01", "label": "Jan 2024 – 2025" },
+      "impact": "Prosthetic arm driven by muscle signals; Voter's Choice out of 160+ projects.",
+      "bullets": [
+        "Led 5 students using Arduino and EMG electrodes to replicate arm motion",
+        "Placed 3rd of 20+ teams at a hackathon",
+        "Featured at the MIT x Harvard Augmentation Summit"
+      ],
+      "tags": ["Medtech", "Electronics", "Robotics"],
+      "image": "hero.jpg",
+      "imageAlt": "Live EMG demo of the BioMyo arm at a research symposium",
+      "gallery": [],
+      "video": "",
+      "links": [
+        { "label": "Devpost", "url": "https://devpost.com/software/biomyo" }
+      ]
+    },
+    {
+      "slug": "samtec",
+      "type": "job",
+      "title": "R&D Optics Engineer Co-op",
+      "org": "Samtec",
+      "dates": { "start": "2026-08", "end": "present" },
+      "impact": "Built a ±1 µm optical test setup on a 6-axis robotic positioner.",
+      "bullets": [
+        "Design experiments that recreate the error states of VCSEL components",
+        "Built the setup with 3D-printed kinematic fixtures and a Thorlabs CCD camera",
+        "Reverse-engineered a Suruga Seiki positioner and automated moves between VCSELs"
+      ],
+      "tags": ["Robotics", "Test", "Software"],
+      "image": "logo.png",
+      "imageAlt": "Samtec logo",
+      "imageFit": "contain",
+      "gallery": [],
+      "video": "",
+      "links": []
+    },
+    {
+      "slug": "boeing",
+      "type": "job",
+      "title": "Supply Chain Engineering Intern",
+      "org": "Boeing",
+      "dates": { "start": "2026-05", "end": "2026-08" },
+      "impact": "Built AI agents that sorted 6,000+ data entries and cut turnaround time by 50%.",
+      "bullets": [
+        "Led improvement of Production Readiness Assessments used across 12,000+ suppliers",
+        "Tracked KPIs so incoming products met AS9100 requirements",
+        "Trained 30+ engineers on AI tools as part of Boeing's AI Steering team"
+      ],
+      "tags": ["Aerospace", "Software"],
+      "image": "logo.png",
+      "imageAlt": "Boeing logo",
+      "imageFit": "contain",
+      "gallery": [],
+      "video": "",
+      "links": []
+    },
+    {
+      "slug": "jhta",
+      "type": "job",
+      "title": "Systems Engineer Intern",
+      "org": "JH Technology Associates",
+      "dates": { "start": "2024-11", "end": "2026-05" },
+      "impact": "Tested and calibrated a spectrophotometer now on the International Space Station.",
+      "bullets": [
+        "Integrated subsystems with Arduino, C++, and a Python GUI, identifying 35 error states",
+        "Calibrated the device with MATLAB analysis, increasing signal-to-noise ratio by 20%",
+        "Designed wire management in SolidWorks, soldered PCBs, and 3D printed 45+ prototype parts"
+      ],
+      "tags": ["Aerospace", "Electronics", "CAD"],
+      "image": "logo.png",
+      "imageAlt": "International Space Station patch",
+      "imageFit": "contain",
+      "gallery": [],
+      "video": "",
+      "links": []
+    },
+    {
+      "slug": "dxd-healthtech",
+      "type": "job",
+      "title": "Pathways in Technology Intern",
+      "org": "Diversity by Doing HealthTech · Stanford Biodesign",
+      "dates": { "start": "2025-01", "end": "2025-04" },
+      "impact": "Led a team of 5 to a clinical needs statement with Intuitive Surgical mentors.",
+      "bullets": [
+        "Researched endometriosis and presented the shortcomings of current solutions",
+        "Presented the needs statement to 40+ participants",
+        "Represented DxD and MedTech Color at the AdvaMed MTC 2025 conference"
+      ],
+      "tags": ["Medtech"],
+      "image": "logo.png",
+      "imageAlt": "Stanford University seal",
+      "imageFit": "contain",
+      "gallery": [],
+      "video": "",
+      "links": []
+    },
+    {
+      "slug": "stanford-oct",
+      "type": "job",
+      "title": "Research Intern",
+      "org": "Stanford University · Structural Biology",
+      "dates": { "start": "2024-09", "end": "2024-12" },
+      "impact": "Designed a scanner skin adapter with 4.6 µm repeatability against a 500 µm requirement.",
+      "bullets": [
+        "The adapter couples an OCT scanner to skin for noninvasive biopsy and cancer monitoring",
+        "Prototyped 7+ CAD revisions using kinematic coupling",
+        "Wrote the test procedures and read 20+ papers to define requirements"
+      ],
+      "tags": ["Medtech", "CAD", "Test"],
+      "image": "hero.jpg",
+      "imageAlt": "3D-printed OCT skin adapter with magnets on an optical table",
+      "gallery": [
+        { "src": "01.jpg", "alt": "Adapter mounted on the handheld OCT scanner" },
+        { "src": "02.jpg", "alt": "Adapter CAD model" },
+        { "src": "03.jpg", "alt": "Skin ring with magnets on a forearm" },
+        { "src": "04.jpg", "alt": "Printed prototype revisions" },
+        { "src": "05.jpg", "alt": "OCT scan taken through the adapter" }
+      ],
+      "video": "",
+      "links": []
+    },
+    {
+      "slug": "nda-client-project",
+      "type": "project",
+      "title": "Industry Client Project (under NDA)",
+      "org": "Engineering Solutions @ Berkeley",
+      "dates": { "start": "2025-09", "end": "2025-12" },
+      "impact": "Evaluated the manufacturability of a proposed assembly process for a medical manufacturing client and delivered a go/no-go recommendation.",
+      "bullets": [
+        "Evaluated the manufacturability of a proposed assembly process for a medical manufacturing client and delivered a go/no-go recommendation",
+        "Ran SolidWorks contact FEA to predict part deformation and stress under fixture loads",
+        "Authored the design FMEA and process FMEA, wrote a test protocol, and designed a joint concept in CAD"
+      ],
+      "tags": ["Medtech", "CAD", "Test"],
+      "image": "",
+      "gallery": [],
+      "video": "",
+      "links": []
+    },
+    {
+      "slug": "posture-device",
+      "type": "project",
+      "title": "Posture Correction Wearable",
+      "org": "T-PREP, UC Berkeley · Team Lead",
+      "dates": { "start": "2025-07", "end": "2025-08" },
+      "impact": "Led a team of 5; won Best Presentation out of 24 teams.",
+      "bullets": [
+        "Built a compact wearable with Arduino, accelerometers, vibration motors, and CAD",
+        "Selected as an Engineering Ambassador",
+        "Presented to 100+ investors, professors, and students"
+      ],
+      "tags": ["Medtech", "Electronics", "CAD"],
+      "image": "hero.jpg",
+      "imageAlt": "Best Presentation Award certificate from the T-PREP Design Expo",
+      "gallery": [],
+      "video": "",
+      "links": []
+    },
+    {
+      "slug": "bottle-opener",
+      "type": "project",
+      "title": "Auto-Locking Bottle Opener for Stroke Survivors",
+      "org": "UC Davis Biomedical Engineering Design Challenge",
+      "dates": { "start": "2025-05", "end": "2025-05", "label": "2025" },
+      "impact": "1st place, leading a team of 4.",
+      "bullets": [
+        "Designed an auto-locking bottle opener for stroke survivors with hemiparesis",
+        "Won 1st place at the UC Davis Biomedical Engineering Design Challenge"
+      ],
+      "tags": ["Medtech", "CAD"],
+      "image": "hero.jpg",
+      "gallery": [],
+      "video": "",
+      "links": []
+    },
+    {
+      "slug": "robotics-club",
+      "type": "project",
+      "title": "Combat Robotics Club President",
+      "org": "Community college robotics club",
+      "dates": { "start": "2024-03", "end": "2025-04" },
+      "impact": "Led 20 to 50+ members and raised $1,500 for a shared 3D printer.",
+      "bullets": [
+        "Competed mainly in battlebots competitions",
+        "Taught soldering and 3D CAD to members",
+        "Named Outstanding Club of the Year 2024"
+      ],
+      "tags": ["Robotics", "Fabrication"],
+      "image": "hero.jpg",
+      "imageAlt": "3D-printed combat robot with its top cover off",
+      "gallery": [
+        { "src": "01.jpg", "alt": "Combat robot from above, showing the drive motors and wiring" },
+        { "src": "02.jpg", "alt": "Combat robot electronics laid out and labeled: weapon motor, speed controllers, receiver, battery" }
+      ],
+      "video": "",
+      "links": []
+    },
+    {
+      "slug": "nasa-enhance",
+      "type": "job",
+      "title": "Mission Design Team Scientist",
+      "org": "NASA L'SPACE · Team ENHANCE",
+      "dates": { "start": "2023-09", "end": "2023-12" },
+      "impact": "One of 12 students who delivered a design review for a mission to Saturn's moon Enceladus.",
+      "bullets": [
+        "Created the trade studies table for the science instruments",
+        "Developed and managed the mission's risk table"
+      ],
+      "tags": ["Aerospace"],
+      "image": "hero.jpg",
+      "imageAlt": "Team ENHANCE concept of operations graphic for the Enceladus mission",
+      "gallery": [],
+      "video": "",
+      "links": []
+    }
+  ],
+
+  "skills": [
+    { "group": "CAD / Design", "items": ["SolidWorks", "Onshape", "GD&T", "Tolerance stack-up", "Kinematic coupling", "DFM / DFA", "Engineering drawings"] },
+    { "group": "Fabrication", "items": ["3D printing", "Manual mill", "Lathe", "Laser cutter", "Soldering", "Injection molding design", "Rapid prototyping"] },
+    { "group": "Electronics", "items": ["Arduino", "Microcontrollers", "I2C", "Bluetooth Low Energy", "Sensors", "Stepper / PWM motor control", "PCBs", "Oscilloscope", "DAQ", "Strain gauges"] },
+    { "group": "Software", "items": ["Python", "MATLAB", "C++", "Java", "LabVIEW", "AI agents and automation"] },
+    { "group": "Analysis", "items": ["FEA", "DFMEA / PFMEA", "Test protocols", "Verification and validation", "Repeatability testing", "Data analysis"] }
+  ]
+}
