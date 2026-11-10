@@ -30,7 +30,7 @@ portfolio/
 
 1. Never add a GPA. Never mention De Anza, in any field.
 2. Graduation date is May 2028.
-3. `nda-client-project`: keep the wording exactly as it is, never name the client, never add images.
+3. `sanisure` (under NDA): Brian chose on 2026-11-09 to show the SaniSure name and logo. Keep the bullets exactly as they are and never add project photos or technical details. Logo only.
 4. `samtec` and `jhta`: no images until Brian says they are cleared.
 5. Only use facts from `Documents\Resumes\resume_bank.md`. Do not invent numbers.
 6. Say what was built, not a quality. No "precision engineering" style wording.
@@ -83,7 +83,7 @@ Remove a row from the table above when you fill its slot.
 | Posture Correction Wearable | `hero.jpg`: Best Presentation award photo. Replace with a photo of the device when there is one |
 
 Jobs that have no project photo use a logo. To swap a logo for a real photo, add `hero.jpg`, set `"image": "hero.jpg"`, and delete the `imageFit` line.
-Samtec and JHTA stay logo-only until their project photos are cleared. The NDA project (`"image": ""`) never gets images.
+Samtec and JHTA stay logo-only until their project photos are cleared. The SaniSure project shows the company logo only and never gets project photos. The three ESB client projects (`linear-array-detector`, `sanisure`, `nexus-labs`) each name their client in `org`.
 
 ## content.json schema
 

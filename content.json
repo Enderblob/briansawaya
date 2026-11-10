@@ -3,11 +3,13 @@
     "Keys starting with an underscore are notes for editors. The site ignores them.",
     "IMAGES: each entry's hero photo goes in assets/projects/<slug>/hero.jpg (16:9, about 1600 x 900). Until the file exists the site shows a gray placeholder, so no JSON edit is needed when you add one.",
     "Jobs without a project photo use the company logo (logo.png) with \"imageFit\": \"contain\" so it is shown whole instead of cropped.",
-    "samtec and jhta: logo only until project photos are cleared. nda-client-project (\"image\": \"\") must NEVER get images.",
+    "samtec and jhta: logo only until project photos are cleared.",
+    "ESB CLIENT PROJECTS (3): linear-array-detector (Williams Lab), sanisure (SaniSure), nexus-labs (Nexus Lab). Each names its client in 'org'.",
+    "sanisure: Brian chose on 2026-11-09 to show the SaniSure name and logo. The project is under NDA, so keep the bullets exactly as written and never add project photos or technical details (logo only).",
     "TODO links.github: add your GitHub profile URL (the GitHub link stays hidden while this is empty).",
     "TODO bottle-opener: the month is a guess (May 2025). Fix dates.start and dates.end so it sorts correctly.",
     "TODO robotics-club: confirm how you want the club named in 'org'.",
-    "nda-client-project: keep the wording exactly as written.",
+    "TODO nexus-labs: confirm the lab's exact name with the client contact, and add a logo or photo if there is one.",
     "Writing rules: say what was built, not a quality. Impact = one short line with a number. At most 3 bullets and 3 tags per entry (the site cuts off extras)."
   ],
 
@@ -88,7 +90,7 @@
       "type": "project",
       "featured": true,
       "title": "Linear Array Detector for Mass Spectrometry",
-      "org": "Engineering Solutions @ Berkeley",
+      "org": "Engineering Solutions @ Berkeley · Client: Williams Lab, UC Berkeley",
       "dates": { "start": "2025-09", "end": "present" },
       "impact": "Aligned a 19-hole electrode array to under 0.1 mm between plates.",
       "bullets": [
@@ -235,10 +237,28 @@
       "links": []
     },
     {
-      "slug": "nda-client-project",
+      "slug": "nexus-labs",
       "type": "project",
-      "title": "Industry Client Project (under NDA)",
-      "org": "Engineering Solutions @ Berkeley",
+      "title": "Weather-Sealed Sensor Enclosure",
+      "org": "Engineering Solutions @ Berkeley · Client: Nexus Lab, UC Berkeley",
+      "dates": { "start": "2026-09", "end": "present" },
+      "impact": "Sealing a field sensor housing built around a 16 in acrylic dome with a custom PCB inside.",
+      "bullets": [
+        "Running seal calculations to set gasket compression and toggle latch spacing, using closed-cell EPDM foam",
+        "Working out how to modify and bond an off-the-shelf acrylic dome to the housing",
+        "Designed the team's research poster for the client lab"
+      ],
+      "tags": ["CAD", "Fabrication", "Test"],
+      "image": "",
+      "gallery": [],
+      "video": "",
+      "links": []
+    },
+    {
+      "slug": "sanisure",
+      "type": "project",
+      "title": "SaniSure Client Project (under NDA)",
+      "org": "Engineering Solutions @ Berkeley · Client: SaniSure",
       "dates": { "start": "2025-09", "end": "2025-12" },
       "impact": "Evaluated the manufacturability of a proposed assembly process for a medical manufacturing client and delivered a go/no-go recommendation.",
       "bullets": [
@@ -247,7 +267,9 @@
         "Authored the design FMEA and process FMEA, wrote a test protocol, and designed a joint concept in CAD"
       ],
       "tags": ["Medtech", "CAD", "Test"],
-      "image": "",
+      "image": "logo.svg",
+      "imageAlt": "SaniSure logo",
+      "imageFit": "contain",
       "gallery": [],
       "video": "",
       "links": []
