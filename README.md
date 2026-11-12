@@ -22,7 +22,6 @@ portfolio/
 └── assets/
     ├── resume.pdf              the resume every "Resume" button downloads
     ├── headshot.jpg            (add this) portrait photo for the hero
-    ├── fonts/                  self-hosted Inter (body) and Fraunces (headings)
     └── projects/<slug>/        one folder per timeline entry: hero.jpg plus gallery photos
 ```
 
@@ -77,6 +76,7 @@ Remove a row from the table above when you fill its slot.
 | BioMyo | `hero.jpg` |
 | Samtec, Boeing, DxD HealthTech (Stanford Biodesign logo) | `logo.png`, shown whole with `"imageFit": "contain"` |
 | JHTA | `logo.svg`: simple drawing of the International Space Station |
+| Nexus Lab (ESB client) | `logo.png`: Engineering Solutions @ Berkeley cube logo, `"imageFit": "contain"` |
 | Headshot | `assets/headshot.jpg` (from Downloads) |
 | Combat Robotics Club | `hero.jpg` + gallery `01`–`02.jpg` (Drive and Downloads) |
 | NASA L'SPACE | `logo.svg` (NASA logo) + gallery `01.jpg`: Team ENHANCE concept-of-operations graphic |

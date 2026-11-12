@@ -9,7 +9,7 @@
     "sanisure: Brian chose on 2026-11-09 to show the SaniSure name and logo. The project is under NDA, so keep the bullets exactly as written and never add project photos or technical details (logo only).",
     "TODO links.github: add your GitHub profile URL (the GitHub link stays hidden while this is empty).",
     "TODO robotics-club: confirm how you want the club named in 'org'.",
-    "TODO nexus-labs: confirm the lab's exact name with the client contact, and add a logo or photo if there is one.",
+    "nexus-labs: shows the Engineering Solutions @ Berkeley logo (Brian chose this on 2026-11-11). TODO: confirm the lab's exact name with the client contact.",
     "Writing rules: say what was built, not a quality. Impact = one short line with a number. At most 3 bullets and 3 tags per entry (the site cuts off extras)."
   ],
 
@@ -66,26 +66,6 @@
       "links": []
     },
     {
-      "slug": "smart-insole",
-      "type": "project",
-      "featured": true,
-      "title": "Smart Insole for Diabetic Foot Ulcers",
-      "org": "Hackathon · Team of 4",
-      "dates": { "start": "2026-10", "end": "2026-10" },
-      "impact": "Insole that flags ulcer risk when left and right feet differ by 2.2 °C.",
-      "bullets": [
-        "Programmed two Arduino Nano 33 IoT boards in C++ to read 4 thermistors per foot and an IMU over I2C",
-        "Streamed live sensor data over Bluetooth Low Energy to a Python logger",
-        "Owned the data pipeline, the Bluetooth link, and the bill of materials"
-      ],
-      "tags": ["Medtech", "Electronics", "Software"],
-      "image": "hero.svg",
-      "imageAlt": "System diagram: thermistors and an IMU on each foot feed an Arduino Nano 33 IoT, which sends data over Bluetooth Low Energy to a Python logger",
-      "gallery": [],
-      "video": "",
-      "links": []
-    },
-    {
       "slug": "linear-array-detector",
       "type": "project",
       "featured": true,
@@ -130,6 +110,26 @@
       "links": [
         { "label": "Devpost", "url": "https://devpost.com/software/biomyo" }
       ]
+    },
+    {
+      "slug": "smart-insole",
+      "type": "project",
+      "featured": true,
+      "title": "Smart Insole for Diabetic Foot Ulcers",
+      "org": "Hackathon · Team of 4",
+      "dates": { "start": "2026-10", "end": "2026-10" },
+      "impact": "Insole that flags ulcer risk when left and right feet differ by 2.2 °C.",
+      "bullets": [
+        "Programmed two Arduino Nano 33 IoT boards in C++ to read 4 thermistors per foot and an IMU over I2C",
+        "Streamed live sensor data over Bluetooth Low Energy to a Python logger",
+        "Owned the data pipeline, the Bluetooth link, and the bill of materials"
+      ],
+      "tags": ["Medtech", "Electronics", "Software"],
+      "image": "hero.svg",
+      "imageAlt": "System diagram: thermistors and an IMU on each foot feed an Arduino Nano 33 IoT, which sends data over Bluetooth Low Energy to a Python logger",
+      "gallery": [],
+      "video": "",
+      "links": []
     },
     {
       "slug": "samtec",
@@ -251,7 +251,9 @@
         "Designed the team's research poster for the client lab"
       ],
       "tags": ["CAD", "Fabrication", "Test"],
-      "image": "",
+      "image": "logo.png",
+      "imageFit": "contain",
+      "imageAlt": "Engineering Solutions @ Berkeley logo",
       "gallery": [],
       "video": "",
       "links": []

@@ -1,35 +1,19 @@
-/* ---------- Fonts ---------- */
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400 700;
-  font-display: swap;
-  src: url("assets/fonts/inter-latin.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Fraunces";
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("assets/fonts/fraunces-latin.woff2") format("woff2");
-}
-
 /* ---------- Tokens ---------- */
 :root {
-  --bg: #faf9f6;          /* off-white page */
+  --bg: #f7f9fc;          /* cool off-white page */
   --card: #ffffff;
   --ink: #141414;         /* near-black text */
-  --muted: #5d5b55;       /* secondary text */
-  --line: #e3e0d8;        /* hairlines */
-  --placeholder: #e9e7e1; /* empty image slots */
-  --accent: #ff5a00;      /* safety orange: rules, dots, fills */
-  --accent-ink: #b84300;  /* darker orange that passes contrast as text */
+  --muted: #535d6b;       /* secondary text */
+  --line: #dde3ec;        /* hairlines */
+  --placeholder: #e6ebf2; /* empty image slots */
+  --accent: #1f5fbf;      /* trust blue: rules, dots, fills */
+  --accent-ink: #164a99;  /* darker blue that passes contrast as text */
   --metal: #c4c0b5;       /* heart parts */
   --radius: 10px;
   --nav-h: 56px;
   --gutter: 16px;
-  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font: "Times New Roman", Times, serif;
+  --serif: "Times New Roman", Times, serif;
 }
 
 /* ---------- Base ---------- */
@@ -337,7 +321,7 @@ main {
   overflow: hidden;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
-.card:hover, .card.open { border-color: #cfcbc0; box-shadow: 0 1px 2px rgba(20, 20, 20, 0.04), 0 8px 24px rgba(20, 20, 20, 0.06); }
+.card:hover, .card.open { border-color: #c3ccd9; box-shadow: 0 1px 2px rgba(20, 20, 20, 0.04), 0 8px 24px rgba(20, 20, 20, 0.06); }
 .card .entry-text { padding: 18px 18px 16px; }
 .cards-featured .entry-title { font-size: 1.35rem; }
 .cards-more .entry-title { font-size: 1.1rem; }
@@ -453,8 +437,8 @@ main {
 .heart-glow { opacity: 0; transition: opacity 0.5s ease; }
 
 .heart .shell { stroke: var(--ink); stroke-width: 2.5; stroke-linejoin: round; transition: fill 0.5s ease; }
-.heart .shell-l { fill: #f1eee7; }
-.heart .shell-r { fill: #e6e2d9; }
+.heart .shell-l { fill: #eef2f8; }
+.heart .shell-r { fill: #e2e8f1; }
 .heart .metal { fill: var(--metal); stroke: var(--ink); stroke-width: 2; }
 .heart .hub { fill: var(--bg); stroke: var(--ink); stroke-width: 2; }
 .heart .bolt { fill: #dcd8ce; stroke: var(--ink); stroke-width: 2; }
@@ -482,8 +466,8 @@ main {
 
 /* Finished: orange glow, LED on, ECG line visible */
 .heart.complete .heart-glow { opacity: 1; }
-.heart.complete .shell-l { fill: #ffc8a6; }
-.heart.complete .shell-r { fill: #ffb489; }
+.heart.complete .shell-l { fill: #b9d0f2; }
+.heart.complete .shell-r { fill: #9dbcec; }
 .heart.complete .led { fill: var(--accent); }
 .heart.complete .heart-ecg { opacity: 1; }
 
@@ -528,7 +512,7 @@ main {
     min-height: 1.4em;
     margin-top: 6px;
     color: var(--muted);
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-family: var(--font);
     font-size: 0.72rem;
     letter-spacing: 0.04em;
     text-align: center;
