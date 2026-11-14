@@ -114,7 +114,7 @@
     {
       "slug": "smart-insole",
       "type": "project",
-      "featured": true,
+      "featured": false,
       "title": "Smart Insole for Diabetic Foot Ulcers",
       "org": "Hackathon · Team of 4",
       "dates": { "start": "2026-10", "end": "2026-10" },
